@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hackathon!</title>
+    <script src="scripts/aframe.js"></script>
+    <script src="scripts/play-on-click.js"></script>
+    <script src="scripts/hide-on-play.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <video id="videoBunny" preload="auto"
+               src="zeedijk2.mp4"
+               width="1920" height="1080" autoplay loop="true"
+               autoplay loop playsinline webkit-playsinline
+               crossOrigin="anonymous" muted></video>
+      </a-assets>
+      <!-- <a-entity material="shader: flat; src: #videoBunny"
+                geometry="primitive: plane; width: 1920; height: 1080;"
+                position="0 60 -250"
+                play-on-click
+                visible="true">
+      </a-entity> -->
+      
+
+      <a-camera>
+
+        <!-- <a-entity
+          id="blabla"
+          position="0 0 -1.5"
+          text="align: center;
+            width: 6;
+            wrapCount: 100;
+            color: black;
+            value: Click or tap to start video"
+          >
+        </a-entity> -->
+
+        <!-- <a-entity
+          position="0 0 -1.5"
+          text="align: center;
+                width: 6;
+                wrapCount: 100;
+                color: black;
+                value: Click or tap to start video"
+          hide-on-play="#videoBunny">
+        </a-entity> -->
+      </a-camera>
+
+      <a-videosphere src="#videoBunny" keypress></a-videosphere>
+
+      <!-- <a-sky src="zeedijk4.png" rotation="0 -1 0"></a-sky> -->
+    </a-scene>
+
+    
+  </body>
+</html>
